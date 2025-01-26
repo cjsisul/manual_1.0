@@ -121,10 +121,6 @@ table th {
     display: none;
 }
 
-
-
-
-
 .hidden-text {
     display: none; /* 숫자 숨기기 */
 }
@@ -153,8 +149,8 @@ table th {
 
 /* 앞쪽 아이콘 (항상 보이는 아이콘) */
 .fixed-icon {
-    width: 20px;  /* 원하는 크기로 조정 */
-    height: 20px;
+    width: 2px;  /* 원하는 크기로 조정 */
+    height: 2px;
     margin-right: 5px;
     margin-left: 10px;
     vertical-align: middle;
