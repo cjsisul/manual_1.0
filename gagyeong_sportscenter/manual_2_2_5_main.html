@@ -9,7 +9,7 @@
 <body>
     <div class="sidebar">
         <h2>가경국민체육센터<br>
-             기술 매뉴얼</h2>
+                기술 매뉴얼</h2>
         <ul>
             <li><a href="#" onclick="loadContent('update')">업데이트 현황</a></li>
             <li>
@@ -91,7 +91,7 @@ function loadContent(section) {
 
     switch (section) {
         case 'update':
-            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/updatecontainer_gagyeong_sportscenter_tech.html")
+            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/updatecontainer/updatecontainer_gagyeong_sportscenter_tech.html")
             .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
             return response.text();
