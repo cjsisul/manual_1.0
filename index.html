@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>체육시설 통합 매뉴얼</title>
     <link rel="stylesheet" href="https://manual-flame.vercel.app/css/styles.css">
-
-
-
-
 </head>
 <body>
     <div class="sidebar">
@@ -26,7 +22,8 @@
                     <li><a href="#" onclick="loadContent('gagyeong_sportscenter')">가경국민체육센터</a></li>
                 </ul>
             </li>
-            <li><a href="#" onclick="toggleMenu('manual')">매뉴얼</a>
+            <li>
+                <a href="#" onclick="toggleMenu('manual')">매뉴얼</a>
                 <ul id="manual" class="hidden">
                     <li><a href="#" onclick="loadContent('admin')">행정</a></li>
                     <li><a href="#" onclick="loadContent('tech')">기술</a></li>
@@ -36,110 +33,79 @@
             <li><a href="#" onclick="loadContent('voc')">VOC</a></li>
         </ul>
         <div class="sidebar-footer">
-        <p>v1.09</p>
-        <p>creator: 박영규, 박현수</p>
+            <p>v1.09</p>
+            <p>creator: 박영규, 박현수</p>
         </div>
     </div>
-    
+
     <div id="main-content" class="main-content">
-        
         <div id="content-area">
             <h3>여기에 클릭된 메뉴의 내용이 표시됩니다.</h3>
         </div>
     </div>
 
 <script>
-
 function loadContent(section) {
     var contentArea = document.getElementById("content-area");
 
     switch (section) {
         case 'update':
-            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/updatecontainer/updatecontainer_main.html", {
-            mode: 'cors',
-            cache: 'no-cache'
-            })
-            .then(response => {
-            if (!response.ok) throw new Error('Network response was not ok');
-            return response.text();
-            })
-            .then(data => contentArea.innerHTML = data)
-            .catch(error => {
-            contentArea.innerHTML = '<p>콘텐츠를 불러오는 데 실패했습니다.</p>';
-            console.error('Error loading the content:', error);
-            });
+            fetch("https://manual-flame.vercel.app/updatecontainer/updatecontainer_main.html")
+                .then(response => response.text())
+                .then(data => contentArea.innerHTML = data)
+                .catch(error => {
+                    contentArea.innerHTML = '<p>콘텐츠를 불러오는 데 실패했습니다.</p>';
+                    console.error('Error loading the content:', error);
+                });
             break;
+
         case 'facility':
-            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/facility.html")
-            .then(response => {
-            if (!response.ok) throw new Error('Network response was not ok');
-            return response.text();
-            })
-            .then(data => contentArea.innerHTML = data)
-            .catch(error => {
-            contentArea.innerHTML = '<p>콘텐츠를 불러오는 데 실패했습니다.</p>';
-            console.error('Error loading the content:', error);
-            });
+            fetch("https://manual-flame.vercel.app/facility.html")
+                .then(response => response.text())
+                .then(data => contentArea.innerHTML = data)
+                .catch(error => {
+                    contentArea.innerHTML = '<p>콘텐츠를 불러오는 데 실패했습니다.</p>';
+                    console.error('Error loading the content:', error);
+                });
             break;
+
         case 'cheongjuSwimming':
-            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/guide/cheongju_swimming_pool_guide.html")
-            .then(response => response.text())
-            .then(data => contentArea.innerHTML = data)
-            .catch(error => {
-                contentArea.innerHTML = '<p>콘텐츠를 불러오는 데 실패했습니다.</p>';
-                console.error('Error loading the content:', error);
-            });
+            fetch("https://manual-flame.vercel.app/guide/cheongju_swimming_pool_guide.html")
+                .then(response => response.text())
+                .then(data => contentArea.innerHTML = data);
             break;
+
         case 'purmi':
-            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/guide/purmi_guide.html")
-            .then(response => response.text())
-            .then(data => contentArea.innerHTML = data)
-            .catch(error => {
-                contentArea.innerHTML = '<p>콘텐츠를 불러오는 데 실패했습니다.</p>';
-                console.error('Error loading the content:', error);
-            });
+            fetch("https://manual-flame.vercel.app/guide/purmi_guide.html")
+                .then(response => response.text())
+                .then(data => contentArea.innerHTML = data);
             break;
+
         case 'youngun_sportscenter':
-            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/guide/youngun_sportscenter_guide.html")
-            .then(response => response.text())
-            .then(data => contentArea.innerHTML = data)
-            .catch(error => {
-                contentArea.innerHTML = '<p>콘텐츠를 불러오는 데 실패했습니다.</p>';
-                console.error('Error loading the content:', error);
-            });
+            fetch("https://manual-flame.vercel.app/guide/youngun_sportscenter_guide.html")
+                .then(response => response.text())
+                .then(data => contentArea.innerHTML = data);
             break;
+
         case 'bokdae_sportscenter':
-            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/guide/bokdae_sportscenter_guide.html")
-            .then(response => response.text())
-            .then(data => contentArea.innerHTML = data)
-            .catch(error => {
-                contentArea.innerHTML = '<p>콘텐츠를 불러오는 데 실패했습니다.</p>';
-                console.error('Error loading the content:', error);
-            });
+            fetch("https://manual-flame.vercel.app/guide/bokdae_sportscenter_guide.html")
+                .then(response => response.text())
+                .then(data => contentArea.innerHTML = data);
             break;
+
         case 'gagyeong_sportscenter':
-            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/guide/gagyeong_sportscenter_guide.html")
-            .then(response => response.text())
-            .then(data => contentArea.innerHTML = data)
-            .catch(error => {
-                contentArea.innerHTML = '<p>콘텐츠를 불러오는 데 실패했습니다.</p>';
-                console.error('Error loading the content:', error);
-            });
+            fetch("https://manual-flame.vercel.app/guide/gagyeong_sportscenter_guide.html")
+                .then(response => response.text())
+                .then(data => contentArea.innerHTML = data);
             break;
-        
-        case 'admin':
-            contentArea.innerHTML = '<h2>매뉴얼</h2><p>체육시설 사용 매뉴얼입니다.</p>';
-            break;
+
         case 'voc':
             contentArea.innerHTML = '<h2>VOC</h2><p>고객의 소리를 확인하세요.</p>';
             break;
+
         default:
             contentArea.innerHTML = '<p>올바른 섹션이 아닙니다.</p>';
     }
-}
-function loadContent(section) {
-    var contentArea = document.getElementById("content-area");
-
     switch (section) {
         case 'admin':
             contentArea.innerHTML = `
@@ -274,5 +240,32 @@ function toggleMenu(menuId) {
             <button>&raquo;</button>
         </div>
     </div>
+
+
+function toggleMenu(menuId) {
+    var menus = document.querySelectorAll('.sidebar ul ul');
+    menus.forEach(function(menu) {
+        if (menu.id !== menuId) {
+            menu.classList.add('hidden');
+        }
+    });
+
+    var menu = document.getElementById(menuId);
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+    } else {
+        menu.classList.add('hidden');
+    }
+}
+</script>
+
+<div class="pagination">
+    <button>&laquo;</button>
+    <button>&lt;</button>
+    <span>1</span>
+    <button>&gt;</button>
+    <button>&raquo;</button>
+</div>
+
 </body>
 </html>
