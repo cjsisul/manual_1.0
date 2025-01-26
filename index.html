@@ -55,7 +55,7 @@ function loadContent(section) {
 
     switch (section) {
         case 'update':
-            fetch("https://manual-flame.vercel.app/updatecontainer/updatecontainer_main.html")            
+            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/updatecontainer_main.html")            
             .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
             return response.text();
@@ -67,7 +67,7 @@ function loadContent(section) {
             });
             break;
         case 'facility':
-            fetch("https://raw.githubusercontent.com/cjsisul/manual/main/facility.html")
+            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/facility.html")
             .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
             return response.text();
@@ -79,7 +79,7 @@ function loadContent(section) {
             });
             break;
         case 'cheongjuSwimming':
-            fetch("https://raw.githubusercontent.com/cjsisul/manual/main/guide/cheongju_swimming_pool_guide.html")
+            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/guide/cheongju_swimming_pool_guide.html")
             .then(response => response.text())
             .then(data => contentArea.innerHTML = data)
             .catch(error => {
@@ -88,7 +88,7 @@ function loadContent(section) {
             });
             break;
         case 'purmi':
-            fetch("https://raw.githubusercontent.com/cjsisul/manual/main/guide/purmi_guide.html")
+            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/guide/purmi_guide.html")
             .then(response => response.text())
             .then(data => contentArea.innerHTML = data)
             .catch(error => {
@@ -97,7 +97,7 @@ function loadContent(section) {
             });
             break;
         case 'youngun_sportscenter':
-            fetch("https://raw.githubusercontent.com/cjsisul/manual/main/guide/youngun_sportscenter_guide.html")
+            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/guide/youngun_sportscenter_guide.html")
             .then(response => response.text())
             .then(data => contentArea.innerHTML = data)
             .catch(error => {
@@ -106,7 +106,7 @@ function loadContent(section) {
             });
             break;
         case 'bokdae_sportscenter':
-            fetch("https://raw.githubusercontent.com/cjsisul/manual/main/guide/bokdae_sportscenter_guide.html")
+            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/guide/bokdae_sportscenter_guide.html")
             .then(response => response.text())
             .then(data => contentArea.innerHTML = data)
             .catch(error => {
@@ -115,7 +115,7 @@ function loadContent(section) {
             });
             break;
         case 'gagyeong_sportscenter':
-            fetch("https://raw.githubusercontent.com/cjsisul/manual/main/guide/gagyeong_sportscenter_guide.html")
+            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/guide/gagyeong_sportscenter_guide.html")
             .then(response => response.text())
             .then(data => contentArea.innerHTML = data)
             .catch(error => {
@@ -143,30 +143,30 @@ function loadContent(section) {
                 <p>
                     <span class="hidden-text">2.1.1.</span>
                     <a href="#" style="display: inline-flex; align-items: center;" onclick="location.href='tech2.html';">청주수영장 행정분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
-                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon hover-icon"  style="margin-left: 5px; display: none;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual_1.0/main/icon/link_icon2.png" alt="info icon" class="info-icon hover-icon"  style="margin-left: 5px; display: none;">
                 </p>
                 <p style="display: flex; align-items: center;">
-                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;"> 
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual_1.0/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;"> 
                     <span class="hidden-text">2.1.2.</span>
                     <a href="#" style="display: inline-flex; align-items: center;">푸르미스포츠센터 행정분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
                 </p>
                 <p style="display: flex; align-items: center;">
-                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual_1.0/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
                     <span class="hidden-text">2.1.3.</span>
                     <a href="#" style="display: inline-flex; align-items: center;">영운국민체육센터 행정분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
                 </p>
                 <p style="display: flex; align-items: center;">
-                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual_1.0/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
                     <span class="hidden-text">2.1.4.</span>
                     <a href="#" style="display: inline-flex; align-items: center;">복대국민체육센터 행정분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
                 </p>
                 <p style="display: flex; align-items: center;">
-                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual_1.0/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
                     <span class="hidden-text">2.1.5.</span>
                     <a href="https://cjsisul.github.io/manual/manual_2_2_5.html" style="display: inline-flex; align-items: center;">가경국민체육센터 행정분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. 
                 </p>
                 <p style="display: flex; align-items: center;">
-                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual_1.0/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
                     <span class="hidden-text">2.1.6.</span>
                     <a href="https://cjsisul.github.io/manual/manual_2_2_5.html" style="display: inline-flex; align-items: center;">공통 행정분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다.
                 </p>
@@ -176,27 +176,27 @@ function loadContent(section) {
         case 'tech':
             contentArea.innerHTML = `
                 <p>
-                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual_1.0/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
                     <span class="hidden-text">2.2.1.</span>
                     <a href="#" style="display: inline-flex; align-items: center;" onclick="location.href='tech2.html';">청주수영장 기술분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
                 </p>
                 <p style="display: flex; align-items: center;">
-                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual_1.0/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
                     <span class="hidden-text">2.2.2.</span>
                     <a href="#" style="display: inline-flex; align-items: center;">푸르미스포츠센터 기술분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
                 </p>
                 <p style="display: flex; align-items: center;">
-                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual_1.0/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
                     <span class="hidden-text">2.2.3.</span>
                     <a href="#" style="display: inline-flex; align-items: center;">영운국민체육센터 기술분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
                 </p>
                 <p style="display: flex; align-items: center;">
-                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual_1.0/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
                     <span class="hidden-text">2.2.4.</span>
                     <a href="#" style="display: inline-flex; align-items: center;">복대국민체육센터 기술분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
                 </p>
                 <p style="display: flex; align-items: center;">
-                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual_1.0/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
                     <span class="hidden-text">2.2.5.</span>
                     <a href="https://cjsisul.github.io/manual/manual_2_2_5.html" style="display: inline-flex; align-items: center;">가경국민체육센터 기술분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다.
                 </p>
@@ -207,7 +207,7 @@ function loadContent(section) {
         case 'phy':
             contentArea.innerHTML = `
                 <p>
-                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual_1.0/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
                     <span class="hidden-text">2.3.1.</span>
                     <a href="#" style="display: inline-flex; align-items: center;" onclick="location.href='tech2.html';">체육분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
                 </p>
@@ -219,7 +219,7 @@ function loadContent(section) {
         case 'voc':
             contentArea.innerHTML = `
                 <p>
-                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual_1.0/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
                     <span class="hidden-text">2.4.1.</span>
                     <a href="#" style="display: inline-flex; align-items: center;" onclick="location.href='tech2.html';">체육분야</a>를 클릭하면 해당 페이지로 이동합니다. <미구현>
                 </p>
