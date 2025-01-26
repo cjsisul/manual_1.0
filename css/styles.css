@@ -136,16 +136,39 @@ a:hover .hover-icon {
     display: none; /* 숫자 숨기기 */
 }
 
+/* 링크 스타일 - 밑줄 제거, 파란색 및 굵은 글씨 */
 .custom-link {
-    text-decoration: none; /* 밑줄 제거 */
-    color: blue; /* 파란색 글씨 */
-    font-weight: bold; /* 굵게 */
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
 }
 
+/* 방문한 링크 스타일 */
 .custom-link:visited {
-    color: blue; /* 방문 후에도 파란색 유지 */
+    color: blue;
 }
 
+/* 마우스 오버 시 색상 변경 */
 .custom-link:hover {
-    color: darkblue; /* 호버 시 색상 변경 */
+    color: darkblue;
+}
+
+/* 숨겨진 텍스트 스타일 (기본적으로 숨김) */
+.hidden-text {
+    display: none;
+}
+
+/* 마우스 오버 시 숨겨진 텍스트 보이기 */
+p:hover .hidden-text {
+    display: inline;
+}
+
+/* 아이콘 숨기기 */
+.hover-icon {
+    display: none;
+}
+
+/* 마우스 오버 시 아이콘 표시 */
+p:hover .hover-icon {
+    display: inline-block;
 }
