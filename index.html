@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체육시설 통합 매뉴얼</title>
+    <link rel="stylesheet" href="https://manual-flame.vercel.app/css/styles.css">
+
+
+
+
+</head>
+<body>
+    <div class="sidebar">
+        <h2>체육시설 통합 매뉴얼</h2>
+        <ul>
+            <li><a href="#" onclick="loadContent('update')">업데이트 현황</a></li>
+            <li><a href="#" onclick="loadContent('facility')">시설현황</a></li>
+            <li>
+                <a href="#" onclick="toggleMenu('guide')">시설안내</a>
+                <ul id="guide" class="hidden">
+                    <li><a href="#" onclick="loadContent('cheongjuSwimming')">청주수영장</a></li>
+                    <li><a href="#" onclick="loadContent('purmi')">푸르미스포츠센터</a></li>
+                    <li><a href="#" onclick="loadContent('youngun_sportscenter')">영운국민체육센터</a></li>
+                    <li><a href="#" onclick="loadContent('bokdae_sportscenter')">복대국민체육센터</a></li>
+                    <li><a href="#" onclick="loadContent('gagyeong_sportscenter')">가경국민체육센터</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onclick="toggleMenu('manual')">매뉴얼</a>
+                <ul id="manual" class="hidden">
+                    <li><a href="#" onclick="loadContent('admin')">행정</a></li>
+                    <li><a href="#" onclick="loadContent('tech')">기술</a></li>
+                    <li><a href="#" onclick="loadContent('phy')">체육</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onclick="loadContent('voc')">VOC</a></li>
+        </ul>
+        <div class="sidebar-footer">
+        <p>v1.09</p>
+        <p>creator: 박영규, 박현수</p>
+        </div>
+    </div>
+    
+    <div id="main-content" class="main-content">
+        
+        <div id="content-area">
+            <h3>여기에 클릭된 메뉴의 내용이 표시됩니다.</h3>
+        </div>
+    </div>
+
+<script>
+
+function loadContent(section) {
+    var contentArea = document.getElementById("content-area");
+
+    switch (section) {
+        case 'update':
+            fetch("https://manual-flame.vercel.app/updatecontainer/updatecontainer_main.html")            
+            .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.text();
+            })
+            .then(data => contentArea.innerHTML = data)
+            .catch(error => {
+            contentArea.innerHTML = '<p>콘텐츠를 불러오는 데 실패했습니다.</p>';
+            console.error('Error loading the content:', error);
+            });
+            break;
+        case 'facility':
+            fetch("https://raw.githubusercontent.com/cjsisul/manual/main/facility.html")
+            .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.text();
+            })
+            .then(data => contentArea.innerHTML = data)
+            .catch(error => {
+            contentArea.innerHTML = '<p>콘텐츠를 불러오는 데 실패했습니다.</p>';
+            console.error('Error loading the content:', error);
+            });
+            break;
+        case 'cheongjuSwimming':
+            fetch("https://raw.githubusercontent.com/cjsisul/manual/main/guide/cheongju_swimming_pool_guide.html")
+            .then(response => response.text())
+            .then(data => contentArea.innerHTML = data)
+            .catch(error => {
+                contentArea.innerHTML = '<p>콘텐츠를 불러오는 데 실패했습니다.</p>';
+                console.error('Error loading the content:', error);
+            });
+            break;
+        case 'purmi':
+            fetch("https://raw.githubusercontent.com/cjsisul/manual/main/guide/purmi_guide.html")
+            .then(response => response.text())
+            .then(data => contentArea.innerHTML = data)
+            .catch(error => {
+                contentArea.innerHTML = '<p>콘텐츠를 불러오는 데 실패했습니다.</p>';
+                console.error('Error loading the content:', error);
+            });
+            break;
+        case 'youngun_sportscenter':
+            fetch("https://raw.githubusercontent.com/cjsisul/manual/main/guide/youngun_sportscenter_guide.html")
+            .then(response => response.text())
+            .then(data => contentArea.innerHTML = data)
+            .catch(error => {
+                contentArea.innerHTML = '<p>콘텐츠를 불러오는 데 실패했습니다.</p>';
+                console.error('Error loading the content:', error);
+            });
+            break;
+        case 'bokdae_sportscenter':
+            fetch("https://raw.githubusercontent.com/cjsisul/manual/main/guide/bokdae_sportscenter_guide.html")
+            .then(response => response.text())
+            .then(data => contentArea.innerHTML = data)
+            .catch(error => {
+                contentArea.innerHTML = '<p>콘텐츠를 불러오는 데 실패했습니다.</p>';
+                console.error('Error loading the content:', error);
+            });
+            break;
+        case 'gagyeong_sportscenter':
+            fetch("https://raw.githubusercontent.com/cjsisul/manual/main/guide/gagyeong_sportscenter_guide.html")
+            .then(response => response.text())
+            .then(data => contentArea.innerHTML = data)
+            .catch(error => {
+                contentArea.innerHTML = '<p>콘텐츠를 불러오는 데 실패했습니다.</p>';
+                console.error('Error loading the content:', error);
+            });
+            break;
+        
+        case 'admin':
+            contentArea.innerHTML = '<h2>매뉴얼</h2><p>체육시설 사용 매뉴얼입니다.</p>';
+            break;
+        case 'voc':
+            contentArea.innerHTML = '<h2>VOC</h2><p>고객의 소리를 확인하세요.</p>';
+            break;
+        default:
+            contentArea.innerHTML = '<p>올바른 섹션이 아닙니다.</p>';
+    }
+}
+function loadContent(section) {
+    var contentArea = document.getElementById("content-area");
+
+    switch (section) {
+        case 'admin':
+            contentArea.innerHTML = `
+                <p>
+                    <span class="hidden-text">2.1.1.</span>
+                    <a href="#" style="display: inline-flex; align-items: center;" onclick="location.href='tech2.html';">청주수영장 행정분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon hover-icon"  style="margin-left: 5px; display: none;">
+                </p>
+                <p style="display: flex; align-items: center;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;"> 
+                    <span class="hidden-text">2.1.2.</span>
+                    <a href="#" style="display: inline-flex; align-items: center;">푸르미스포츠센터 행정분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
+                </p>
+                <p style="display: flex; align-items: center;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <span class="hidden-text">2.1.3.</span>
+                    <a href="#" style="display: inline-flex; align-items: center;">영운국민체육센터 행정분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
+                </p>
+                <p style="display: flex; align-items: center;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <span class="hidden-text">2.1.4.</span>
+                    <a href="#" style="display: inline-flex; align-items: center;">복대국민체육센터 행정분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
+                </p>
+                <p style="display: flex; align-items: center;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <span class="hidden-text">2.1.5.</span>
+                    <a href="https://cjsisul.github.io/manual/manual_2_2_5.html" style="display: inline-flex; align-items: center;">가경국민체육센터 행정분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. 
+                </p>
+                <p style="display: flex; align-items: center;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <span class="hidden-text">2.1.6.</span>
+                    <a href="https://cjsisul.github.io/manual/manual_2_2_5.html" style="display: inline-flex; align-items: center;">공통 행정분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다.
+                </p>
+            `;
+            break;
+
+        case 'tech':
+            contentArea.innerHTML = `
+                <p>
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <span class="hidden-text">2.2.1.</span>
+                    <a href="#" style="display: inline-flex; align-items: center;" onclick="location.href='tech2.html';">청주수영장 기술분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
+                </p>
+                <p style="display: flex; align-items: center;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <span class="hidden-text">2.2.2.</span>
+                    <a href="#" style="display: inline-flex; align-items: center;">푸르미스포츠센터 기술분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
+                </p>
+                <p style="display: flex; align-items: center;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <span class="hidden-text">2.2.3.</span>
+                    <a href="#" style="display: inline-flex; align-items: center;">영운국민체육센터 기술분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
+                </p>
+                <p style="display: flex; align-items: center;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <span class="hidden-text">2.2.4.</span>
+                    <a href="#" style="display: inline-flex; align-items: center;">복대국민체육센터 기술분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
+                </p>
+                <p style="display: flex; align-items: center;">
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <span class="hidden-text">2.2.5.</span>
+                    <a href="https://cjsisul.github.io/manual/manual_2_2_5.html" style="display: inline-flex; align-items: center;">가경국민체육센터 기술분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다.
+                </p>
+                    
+            `;
+            break;
+        
+        case 'phy':
+            contentArea.innerHTML = `
+                <p>
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <span class="hidden-text">2.3.1.</span>
+                    <a href="#" style="display: inline-flex; align-items: center;" onclick="location.href='tech2.html';">체육분야</a>를 클릭하면 해당 매뉴얼 페이지로 이동합니다. <미구현>
+                </p>
+                
+                    
+            `;
+            break;
+
+        case 'voc':
+            contentArea.innerHTML = `
+                <p>
+                    <img src="https://raw.githubusercontent.com/cjsisul/manual/main/icon/link_icon2.png" alt="info icon" class="info-icon" style="margin: 0 5px 0 0; vertical-align: middle;">
+                    <span class="hidden-text">2.4.1.</span>
+                    <a href="#" style="display: inline-flex; align-items: center;" onclick="location.href='tech2.html';">체육분야</a>를 클릭하면 해당 페이지로 이동합니다. <미구현>
+                </p>
+                
+                    
+            `;
+            break;
+
+
+        default:
+            contentArea.innerHTML = '<p>올바른 섹션이 아닙니다.</p>';
+    }
+}
+
+function toggleMenu(menuId) {
+    var menu = document.getElementById(menuId);
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+        }
+        else {
+        menu.classList.add('hidden');
+        }
+}
+function toggleMenu(menuId) {
+            // 모든 메뉴를 숨기기
+            var menus = document.querySelectorAll('.sidebar ul ul');
+            menus.forEach(function(menu) {
+                if (menu.id !== menuId) {
+                    menu.classList.add('hidden');
+                }
+            });
+            
+            // 클릭한 메뉴만 펼치기
+            var menu = document.getElementById(menuId);
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        }
+    </script>
+        
+
+        <div class="pagination">
+            <button>&laquo;</button>
+            <button>&lt;</button>
+            <span>1</span>
+            <button>&gt;</button>
+            <button>&raquo;</button>
+        </div>
+    </div>
+</body>
+</html>
