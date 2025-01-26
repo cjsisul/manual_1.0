@@ -55,7 +55,10 @@ function loadContent(section) {
 
     switch (section) {
         case 'update':
-            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/updatecontainer_main.html")            
+            fetch("https://raw.githubusercontent.com/cjsisul/manual_1.0/main/updatecontainer/updatecontainer_main.html", {
+            mode: 'cors',
+            cache: 'no-cache'
+            })
             .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
             return response.text();
